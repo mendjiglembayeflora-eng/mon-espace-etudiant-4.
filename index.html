@@ -1,232 +1,130 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil | Mon espace étudiant</title>
+
+    <title>Portfolio de Flora | Espace étudiant</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>a
+<body>
 
-    <!-- EN-TÊTE -->
-    <header class="header">
+    <!-- En-tête -->
+    <header class="hero">
 
-        <div class="logo">
-            <span>ME</span>
-            <h2>Mon espace étudiant</h2>
-        </div>
+        <nav class="navbar">
+            <h2 class="logo">Flora<span>.</span></h2>
 
-        <nav class="navigation">
-            <a href="index.html" class="active">Accueil</a>
-            <a href="matiere.html">Mes matières</a>
-            <a href="emploi.html">Emploi du temps</a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="matiere.html">Matières</a></li>
+                <li><a href="emploi.html">Emploi du temps</a></li>
+            </ul>
         </nav>
+
+        <div class="hero-content">
+            <p class="salutation">BIENVENUE SUR MON PORTFOLIO</p>
+
+            <h1>Bonjour, je suis <span>Flora</span> !</h1>
+
+            <h2>Étudiante en technologie de l'informatique</h2>
+
+            <p>
+                Bienvenue dans mon espace étudiant.
+                Découvrez mon parcours, mes apprentissages,
+                mes projets et mes compétences numériques.
+            </p>
+
+            <a href="#presentation" class="btn">
+                Découvrir mon espace
+            </a>
+        </div>
 
     </header>
 
-
-    <!-- SECTION PRINCIPALE -->
+    <!-- Présentation -->
     <main>
 
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <p class="petit-titre">
-                    BIENVENUE DANS MON UNIVERS
-                </p>
-
-                <h1>
-                    Construire mon avenir
-                    <span>dans l'informatique</span>
-                </h1>
-
-                <p class="description">
-                    Je suis étudiante en première année de Licence Informatique.
-                    À travers cet espace, je présente mon parcours universitaire,
-                    mes connaissances et mes compétences numériques.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="matiere.html" class="btn principal">
-                        Découvrir mes matières
-                    </a>
-
-                    <a href="#domaines" class="btn secondaire">
-                        Explorer mon portfolio
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="hero-image">
-
-                <div class="image-card">
-                    <div class="icone">💻</div>
-                    <h3>Passion informatique</h3>
-                    <p>Apprendre, créer et progresser.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PRESENTATION -->
-        <section class="presentation">
-
-            <div class="section-heading">
-                <p class="petit-titre">QUI SUIS-JE ?</p>
-                <h2>À propos de moi</h2>
-            </div>
+        <section id="presentation" class="section">
+            <h2>À propos de moi</h2>
 
             <p>
-                Je suis étudiante en première année de Licence Informatique.
-                Je découvre progressivement le monde de la programmation,
-                des systèmes informatiques et du développement web.
+                Je m'appelle Flora et je suis étudiante en première année
+                de technologie de l'informatique.
+                À travers ce portfolio, je présente mon parcours
+                universitaire, les connaissances acquises et les
+                compétences que je développe dans le domaine informatique.
             </p>
-
-            <p>
-                Mon objectif est de développer mes connaissances,
-                améliorer mes compétences et réaliser des projets pratiques.
-            </p>
-
         </section>
 
+        <!-- Mes espaces -->
+        <section class="section">
+            <h2>Mon espace informatique</h2>
 
-        <!-- DOMAINES -->
-        <section class="domaines" id="domaines">
+            <p class="section-description">
+                Retrouvez ici les différentes parties de mon apprentissage.
+            </p>
 
-            <div class="section-heading">
-                <p class="petit-titre">MON PARCOURS</p>
-                <h2>Mes domaines d'apprentissage</h2>
-                <p>
-                    Découvrez les différents domaines que j'étudie
-                    durant ma formation.
-                </p>
-            </div>
+            <div class="cards">
 
-
-            <div class="cartes">
-
-                <article class="carte">
-
-                    <div class="carte-icone">🖥️</div>
-
+                <div class="card">
                     <h3>Systèmes informatiques</h3>
-
                     <p>
-                        Découverte de Linux, des commandes et
-                        du fonctionnement des systèmes d'exploitation.
+                        Découverte des systèmes d'exploitation,
+                        de Linux et des commandes informatiques.
                     </p>
+                    <a href="systemes/index.html">Découvrir →</a>
+                </div>
 
-                    <a href="systemes/index.html">
-                        Découvrir →
-                    </a>
-
-                </article>
-
-
-                <article class="carte">
-
-                    <div class="carte-icone">💻</div>
-
+                <div class="card">
                     <h3>Développement informatique</h3>
-
                     <p>
-                        Apprentissage de l'algorithmique,
-                        du langage C et du développement web.
+                        Algorithmique, langage C et
+                        apprentissage du développement web.
                     </p>
+                    <a href="developpement/index.html">Découvrir →</a>
+                </div>
 
-                    <a href="developpement/index.html">
-                        Découvrir →
-                    </a>
-
-                </article>
-
-
-                <article class="carte">
-
-                    <div class="carte-icone">🌐</div>
-
+                <div class="card">
                     <h3>Compétences numériques</h3>
-
                     <p>
-                        Découverte des outils informatiques,
-                        de la bureautique et des technologies numériques.
+                        Présentation de mes connaissances
+                        et compétences numériques.
                     </p>
+                    <a href="digital-skills/index.html">Découvrir →</a>
+                </div>
 
-                    <a href="digital-skills/index.html">
-                        Découvrir →
-                    </a>
-
-                </article>
-
-
-                <article class="carte">
-
-                    <div class="carte-icone">⚡</div>
-
+                <div class="card">
                     <h3>JavaScript</h3>
-
                     <p>
-                        Découverte des bases de JavaScript
-                        et de l'interactivité dans les pages web.
+                        Exercices et apprentissage
+                        du langage JavaScript.
                     </p>
-
-                    <a href="js/index.html">
-                        Découvrir →
-                    </a>
-
-                </article>
+                    <a href="js/index.html">Découvrir →</a>
+                </div>
 
             </div>
-
         </section>
 
+        <!-- Formation -->
+        <section class="section formation">
+            <h2>Mon objectif</h2>
 
-        <!-- FORMATION -->
-        <section class="formation">
-
-            <div>
-                <p class="petit-titre">MON OBJECTIF</p>
-
-                <h2>Apprendre aujourd'hui, réussir demain.</h2>
-
-                <p>
-                    Chaque projet est une occasion d'apprendre,
-                    de pratiquer et de progresser dans le domaine informatique.
-                </p>
-            </div>
-
-            <a href="emploi.html" class="btn formation-btn">
-                Voir mon emploi du temps
-            </a>
-
+            <p>
+                Développer mes compétences en informatique,
+                apprendre à créer des sites web et réaliser
+                des projets pratiques tout au long de ma formation.
+            </p>
         </section>
 
     </main>
 
-
-    <!-- PIED DE PAGE -->
-    <footer class="footer">
-
-        <h3>Mon espace étudiant</h3>
-
-        <p>
-            Portfolio universitaire - Licence Informatique
-        </p>
-
-        <p class="copyright">
-            © 2026 - Mon espace étudiant. Tous droits réservés.
-        </p>
-
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2026 - Portfolio de Flora | Tous droits réservés</p>
     </footer>
 
 </body>

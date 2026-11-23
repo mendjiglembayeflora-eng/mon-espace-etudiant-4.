@@ -1,243 +1,413 @@
-/* STYLE GENERAL */
 
-*{
+/* ==================================
+   1. STYLE GENERAL
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F0F4F8;
     color: #475467;
-    background-color: #F0f4F8;
     line-height: 1.6;
-
 }
 
-/* EN TETE */
 
-header {
-    background-color: #16436f;
+/* ==================================
+   2. EN-TETE ET NAVIGATION
+================================== */
+
+.header {
+    background-color: #16436F;
     color: white;
-    text-align: center;
-    padding: 20px;
-}
-header h1 {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-
-}
-.sous-titre {
-    font-size: 14px;
-    color:#E5F0FC;
-    margin-top: 10px;
-    margin-bottom: 20px
-}
-
-/* MENU */
-
-nav {
+    padding: 20px 8%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    background-color: white;
+    color: #16436F;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+.navigation {
+    display: flex;
     gap: 12px;
     flex-wrap: wrap;
 }
 
-nav a {
-    display: inline-block;
-    text-decoration: none;
-    background-color: #28608F;
+.navigation a {
     color: white;
-    font-size: 15px;
-    padding: 10px 18px;
-    border-radius: 6px;
-
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 7px;
+    transition: 0.3s;
 }
 
-nav a:hover {
+.navigation a:hover,
+.navigation a.active {
     background-color: white;
-    color: #16436f;
+    color: #16436F;
 }
 
-/* PAGE ACCUEIL */
+
+/* ==================================
+   3. SECTION HERO
+================================== */
+
+.hero {
+    min-height: 480px;
+    padding: 75px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(120deg, #16436F, #28608F);
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: apparition 1s ease;
+}
+
+.petit-titre {
+    color: #4DA7E8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero .petit-titre {
+    color: #B8DFFF;
+}
+
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #A9D7FF;
+}
+
+.description {
+    font-size: 16px;
+    max-width: 570px;
+    margin-bottom: 30px;
+    color: #E5F0FC;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* ==================================
+   4. BOUTONS
+================================== */
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.principal {
+    background-color: white;
+    color: #16436F;
+}
+
+.secondaire {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #00000025;
+}
+
+
+/* ==================================
+   5. CARTE VISUELLE
+================================== */
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 230px;
+    animation: flotter 3s ease-in-out infinite;
+}
+
+.image-card {
+    width: 250px;
+    padding: 35px 20px;
+    border-radius: 20px;
+    background-color: white;
+    color: #16436F;
+    text-align: center;
+    box-shadow: 0 15px 40px #00000030;
+}
+
+.icone {
+    font-size: 75px;
+    margin-bottom: 15px;
+}
+
+.image-card h3 {
+    margin-bottom: 8px;
+}
+
+
+/* ==================================
+   6. PRESENTATION
+================================== */
 
 .presentation {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px #0000000D;
+    animation: apparition 1.2s ease;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    color: #16436F;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.presentation p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+/* ==================================
+   7. CARTES DES DOMAINES
+================================== */
+
+.domaines {
+    padding: 60px 8%;
+}
+
+.section-heading > p:last-child {
+    margin-top: 10px;
+}
+
+.cartes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.carte {
     background-color: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #00000015;
-    margin-bottom: 25px;
-
+    border-radius: 14px;
+    border: 1px solid #DCE4EF;
+    box-shadow: 0 4px 12px #0000000D;
+    transition: 0.35s ease;
+    animation: apparition 1s ease;
 }
 
-.presentation h2 {
-    color: #16436f;
-    font-size: 24px;
+.carte:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px #16436F20;
+    border-color: #28608F;
+}
+
+.carte-icone {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.carte h3 {
+    color: #16436F;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.carte p {
+    margin-bottom: 20px;
+}
+
+.carte a {
+    color: #28608F;
+    text-decoration: none;
     font-weight: bold;
-    margin: 0;
+    transition: 0.3s;
 }
-.presentation p {
-    font-size: 16px;
-    text-align: left;
-    margin: 15px;
 
+.carte a:hover {
+    color: #16436F;
+    padding-left: 6px;
 }
+
+
+/* ==================================
+   8. SECTION FORMATION
+================================== */
 
 .formation {
+    margin: 50px 8%;
+    padding: 40px;
     background-color: #DCEAF7;
-    border: 1px solid #B8D2E9;
-    border-radius: 10px;
-    padding: 25px;
-
+    border-left: 5px solid #16436F;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .formation h2 {
-    font-size: 22px;
-    color: #16436f;
-    font-weight: bold;
-    margin-top: 0;
-
-}
-
-/*PAGE MATIERE */
-
-.titre-page {
-    display: grid;
-    text-align: center;
+    color: #16436F;
     font-size: 26px;
-    color: #16436f;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 25px;
-
+    margin-bottom: 10px;
 }
 
-/* LISTE DES MATIERES */
-
-.liste-matieres {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.formation p {
+    max-width: 650px;
 }
 
-.matiere {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px #00000015;
-    border-left: 4px solid #16436F;
-}
-
-.matiere h3 {
-    color: #16436F;
-    font-size: 20px;
-    margin-top: 0;
-}
-
-.matiere p {
-    font-size: 15px;
-    margin-bottom: 0;
-}
-
-.matiere hr {
-    border: 0;
-    border-top: 1px solid #DCE4EF;
+.formation-btn {
+    background-color: #16436F;
+    color: white;
 }
 
 
-/* PIED DE PAGE */
+/* ==================================
+   9. PIED DE PAGE
+================================== */
 
-footer {
+.footer {
     background-color: #16436F;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px 15px;
 }
 
-footer p {
+.footer h3 {
+    margin-bottom: 8px;
+}
+
+.copyright {
     font-size: 13px;
-    margin: 0;
+    margin-top: 15px;
+    color: #DCEAF7;
 }
 
-/* CONTENU PRINCIPAL */
 
-main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 15px;
-    min-height: 350px;
+/* ==================================
+   10. ANIMATIONS
+================================== */
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* PAGE EMPLOI DU TEMPS */
+@keyframes flotter {
+    0%, 100% {
+        transform: translateY(0);
+    }
 
-.tableau-conteneur {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    overflow-x: auto;
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
-th, td {
-    border: 1px solid #DCE4EF;
-    padding: 15px;
-    text-align: center;
-    font-size: 15px;
-}
+/* ==================================
+   11. RESPONSIVE - TELEPHONE
+================================== */
 
-thead {
-    background-color: #16436F;
-    color: white;
-}
+@media screen and (max-width: 768px) {
 
-thead th {
-    font-weight: bold;
-}
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
 
-tbody th {
-    font-weight: bold;
-    color: #16436F;
-}
+    .navigation {
+        justify-content: center;
+    }
 
-tbody tr:nth-child(even) {
-    background-color: #EDF4FA;
-}
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
 
-tbody tr:nth-child(odd) {
-    background-color: white;
-}
+    .hero h1 {
+        font-size: 32px;
+    }
 
-tbody tr:hover {
-    background-color: #DCEAF7;
-}
+    .hero-buttons {
+        justify-content: center;
+    }
 
-/* REMARQUE */
-
-.remarque {
-    margin-top: 25px;
-    background-color: #DCEAF7;
-    border-left: 4px solid #16436F;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.remarque p {
-    margin: 0;
-}
-
-/* AFFICHAGE SUR PETIT ECRAN */
-
-@media (max-width: 600px) {
-    .liste-matieres {
+    .cartes {
         grid-template-columns: 1fr;
     }
 
-    header {
-        padding: 20px 10px;
+    .presentation {
+        margin: 35px 5%;
+        padding: 25px;
+    }
+
+    .formation {
+        text-align: center;
+        justify-content: center;
     }
 }

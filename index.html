@@ -1,130 +1,161 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfolio de Flora | Espace étudiant</title>
-
+    <title>Mon Portfolio | Développeuse</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
 
-    <!-- En-tête -->
-    <header class="hero">
+    <nav class="navbar">
+        <a href="#home" class="logo">Flora<span>.</span></a>
 
-        <nav class="navbar">
-            <h2 class="logo">Flora<span>.</span></h2>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="matiere.html">Matières</a></li>
-                <li><a href="emploi.html">Emploi du temps</a></li>
-            </ul>
-        </nav>
+        <button id="themeToggle" aria-label="Changer le thème">🌙</button>
+        <button id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+    </nav>
 
+    <header id="home" class="hero">
         <div class="hero-content">
-            <p class="salutation">BIENVENUE SUR MON PORTFOLIO</p>
-
-            <h1>Bonjour, je suis <span>Flora</span> !</h1>
-
-            <h2>Étudiante en technologie de l'informatique</h2>
-
+            <p class="welcome">✦ BIENVENUE DANS MON UNIVERS ✦</p>
+            <h1>Bonjour, je suis <span>Eya</span></h1>
+            <h2>Étudiante en Technologie Informatique</h2>
             <p>
-                Bienvenue dans mon espace étudiant.
-                Découvrez mon parcours, mes apprentissages,
-                mes projets et mes compétences numériques.
+                Passionnée par le développement web,
+                la programmation et les nouvelles technologies.
             </p>
-
-            <a href="#presentation" class="btn">
-                Découvrir mon espace
-            </a>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">Découvrir mes projets</a>
+                <a href="#contact" class="btn btn-outline">Me contacter</a>
+            </div>
         </div>
 
+        <div class="hero-decoration">
+            <div class="circle">💻</div>
+            <span class="floating f1">HTML</span>
+            <span class="floating f2">CSS</span>
+            <span class="floating f3">Python</span>
+        </div>
     </header>
 
-    <!-- Présentation -->
-    <main>
+    <section id="about" class="section">
+        <p class="section-label">QUI SUIS-JE ?</p>
+        <h2 class="section-title">À propos de moi</h2>
 
-        <section id="presentation" class="section">
-            <h2>À propos de moi</h2>
-
-            <p>
-                Je m'appelle Flora et je suis étudiante en première année
-                de technologie de l'informatique.
-                À travers ce portfolio, je présente mon parcours
-                universitaire, les connaissances acquises et les
-                compétences que je développe dans le domaine informatique.
-            </p>
-        </section>
-
-        <!-- Mes espaces -->
-        <section class="section">
-            <h2>Mon espace informatique</h2>
-
-            <p class="section-description">
-                Retrouvez ici les différentes parties de mon apprentissage.
-            </p>
-
-            <div class="cards">
-
-                <div class="card">
-                    <h3>Systèmes informatiques</h3>
-                    <p>
-                        Découverte des systèmes d'exploitation,
-                        de Linux et des commandes informatiques.
-                    </p>
-                    <a href="systemes/index.html">Découvrir →</a>
-                </div>
-
-                <div class="card">
-                    <h3>Développement informatique</h3>
-                    <p>
-                        Algorithmique, langage C et
-                        apprentissage du développement web.
-                    </p>
-                    <a href="developpement/index.html">Découvrir →</a>
-                </div>
-
-                <div class="card">
-                    <h3>Compétences numériques</h3>
-                    <p>
-                        Présentation de mes connaissances
-                        et compétences numériques.
-                    </p>
-                    <a href="digital-skills/index.html">Découvrir →</a>
-                </div>
-
-                <div class="card">
-                    <h3>JavaScript</h3>
-                    <p>
-                        Exercices et apprentissage
-                        du langage JavaScript.
-                    </p>
-                    <a href="js/index.html">Découvrir →</a>
-                </div>
-
+        <div class="about-card">
+            <div class="about-icon">👩‍💻</div>
+            <div>
+                <h3>Une étudiante passionnée par l'informatique</h3>
+                <p>
+                    Je suis étudiante en première année de Licence
+                    Technologie Informatique à l'ISET Nabeul.
+                    Je découvre chaque jour de nouvelles technologies
+                    et développe mes compétences en programmation,
+                    développement web et systèmes informatiques.
+                </p>
+                <p>
+                    Mon objectif est d'apprendre, de créer et de
+                    transformer mes idées en projets concrets.
+                </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Formation -->
-        <section class="section formation">
-            <h2>Mon objectif</h2>
+    <section id="skills" class="section">
+        <p class="section-label">CE QUE J'APPRENDS</p>
+        <h2 class="section-title">Mes compétences</h2>
 
-            <p>
-                Développer mes compétences en informatique,
-                apprendre à créer des sites web et réaliser
-                des projets pratiques tout au long de ma formation.
-            </p>
-        </section>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <span>🌐</span>
+                <h3>HTML</h3>
+                <p>Structure des pages web</p>
+            </div>
 
-    </main>
+            <div class="skill-card">
+                <span>🎨</span>
+                <h3>CSS</h3>
+                <p>Mise en forme et design web</p>
+            </div>
 
-    <!-- Pied de page -->
+            <div class="skill-card">
+                <span>🐍</span>
+                <h3>Python</h3>
+                <p>Programmation et algorithmique</p>
+            </div>
+
+            <div class="skill-card">
+                <span>💻</span>
+                <h3>C</h3>
+                <p>Programmation structurée</p>
+            </div>
+
+            <div class="skill-card">
+                <span>🐧</span>
+                <h3>Linux</h3>
+                <p>Commandes et systèmes</p>
+            </div>
+
+            <div class="skill-card">
+                <span>⚡</span>
+                <h3>JavaScript</h3>
+                <p>Initiation au développement interactif</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <p class="section-label">MES RÉALISATIONS</p>
+        <h2 class="section-title">Mes projets</h2>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">🌐</div>
+                <h3>Site Web</h3>
+                <p>Création de pages web avec HTML et CSS.</p>
+                <span>HTML · CSS</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🐍</div>
+                <h3>Programmation Python</h3>
+                <p>Exercices et applications algorithmiques.</p>
+                <span>Python</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🖥️</div>
+                <h3>Travaux Linux</h3>
+                <p>Découverte des commandes et scripts Shell.</p>
+                <span>Linux · Shell</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <p class="section-label">RESTONS EN CONTACT</p>
+        <h2 class="section-title">Me contacter</h2>
+
+        <div class="contact-card">
+            <p>Une question ou une idée de projet ?</p>
+            <p>N'hésitez pas à me contacter !</p>
+            <a href="mailto:" class="btn">Envoyer un message ✉️</a>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2026 - Portfolio de Flora | Tous droits réservés</p>
+        <p>Créé avec ❤️ par Flora</p>
+        <p>© 2026 - Mon Portfolio Numérique</p>
+        <a href="#home">Retour en haut ↑</a>
     </footer>
 
 </body>
